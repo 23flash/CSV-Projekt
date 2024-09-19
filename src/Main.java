@@ -4,9 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        readFile("datalog_20230418_143118.csv");
+        ArrayList<String> File = readFile("datalog_20230418_143118.csv");
+        /*
+        for (int i = 0; i < File.size() ; i++) {
+            System.out.println(File.get(i));
+        }
 
-
+         */
+        System.out.println(File.get(0));
 
 
 
@@ -19,9 +24,9 @@ public class Main {
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
         int n = 0;
-        br.lines().forEach(line -> {builder.add(line + "\n");});
+        br.lines().forEach(line -> {builder.add(line);});
 
-        System.out.println(builder.toString());
+
         return builder;
 
     }
