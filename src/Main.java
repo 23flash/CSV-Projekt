@@ -18,6 +18,7 @@ public class Main {
         File file = new File(FileName);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
+        int n = 0;
         br.lines().forEach(line -> {builder.add(line + "\n");});
 
         System.out.println(builder.toString());
